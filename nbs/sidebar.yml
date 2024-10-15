@@ -3,3 +3,8 @@ website:
     contents:
       - index.ipynb
       - 00_core.ipynb
+      - section: tests
+        contents:
+          - section: node
+            contents:
+              - tests/node/extracted_classes.html

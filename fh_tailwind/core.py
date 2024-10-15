@@ -101,6 +101,13 @@ module.exports = {
 """
     with tailwind_css_path.open('w') as f:
         f.write(tailwind_css_content)
+        
+    # Step 5: Create a .gitignore file to exclude node_modules
+    print("Creating .gitignore file in the node directory...")
+    gitignore_path = node_dir / '.gitignore'
+    gitignore_content = "node_modules/"
+    with gitignore_path.open('w') as f:
+        f.write(gitignore_content)
 
     # Step 4: Build Tailwind CSS Once, Output to the Public Directory
     print("Building Tailwind CSS...")
@@ -122,7 +129,7 @@ def update_styles():
     all_classes = set()  # Set to hold unique class names
 
     # Regular expression to match cls="..." patterns
-    class_pattern = re.compile(r'cls="([^"]+)"')
+    class_pattern = re.compile(r"cls=['\"]([^'\"]+)['\"]")
 
     # Loop through all Python files and extract classes
     for file in python_files:
