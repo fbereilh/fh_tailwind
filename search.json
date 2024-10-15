@@ -1,0 +1,92 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "fh_tailwind",
+    "section": "",
+    "text": "📖 Explore the Documentation for more examples and details!\nhttps://fbereilh.github.io/fh_tailwind/",
+    "crumbs": [
+      "fh_tailwind"
+    ]
+  },
+  {
+    "objectID": "index.html#key-features",
+    "href": "index.html#key-features",
+    "title": "fh_tailwind",
+    "section": "Key Features",
+    "text": "Key Features\n⚙️ Tailwind and DaisyUI Setup 🔍 Dynamic Class Extraction 🎨 Custom Themes",
+    "crumbs": [
+      "fh_tailwind"
+    ]
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "fh_tailwind",
+    "section": "🛠️ Installation",
+    "text": "🛠️ Installation\nEnsure that Node.js is installed before proceeding. Install the package using pip:\n$ pip install fh_tailwind",
+    "crumbs": [
+      "fh_tailwind"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "fh_tailwind",
+    "section": "🚀 Usage",
+    "text": "🚀 Usage\nTo set up Tailwind in your project, use the following command in the root of the project to initialize everything:\n$ fh_tailwind_setup\nThis command will configure Tailwind and DaisyUI in your project, creating all necessary files and folders (public and node).",
+    "crumbs": [
+      "fh_tailwind"
+    ]
+  },
+  {
+    "objectID": "index.html#example-fasthtml-with-tailwind-and-daisyui",
+    "href": "index.html#example-fasthtml-with-tailwind-and-daisyui",
+    "title": "fh_tailwind",
+    "section": "📋 Example: FastHTML with Tailwind and DaisyUI",
+    "text": "📋 Example: FastHTML with Tailwind and DaisyUI\nTo start using the package in your project:\nfrom fh_tailwind import update_styles\nfrom fasthtml.common import Link, fast_app, serve, Div, P\n\nhdrs = [Link(rel=\"stylesheet\", href=\"public/styles.css\", type=\"text/css\")]\napp, rt = fast_app(\n    live=True,  # 🔴 Enable live updates\n    pico=False,  # 🚫 Disable PicoCSS to use Tailwind instead\n    on_startup=[update_styles],  # 🔄 Run update_styles during startup\n    hdrs=hdrs,\n    htmlkw={\"data-theme\": \"mytheme\"},\n)\n\n@rt(\"/\")\ndef get():\n    return Div(cls=\"flex items-center justify-center h-96\")(\n        P(cls=\"text-6xl text-center font-bold\")(\n            \"Hello, Tailwind and DaisyUI with mytheme is applied!\")\n        )\n\nserve()",
+    "crumbs": [
+      "fh_tailwind"
+    ]
+  },
+  {
+    "objectID": "index.html#requirements",
+    "href": "index.html#requirements",
+    "title": "fh_tailwind",
+    "section": "📋 Requirements",
+    "text": "📋 Requirements\n\nNode.js: This package depends on Node.js for installing and managing Tailwind CSS and DaisyUI.\nPython 3.x: This script uses Python 🐍 to manage files and execute commands.",
+    "crumbs": [
+      "fh_tailwind"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "fh_tailwind",
+    "section": "📜 License",
+    "text": "📜 License\nThis package is open source under the MIT License.",
+    "crumbs": [
+      "fh_tailwind"
+    ]
+  },
+  {
+    "objectID": "index.html#contributions",
+    "href": "index.html#contributions",
+    "title": "fh_tailwind",
+    "section": "🤝 Contributions",
+    "text": "🤝 Contributions\nContributions are welcome! Feel free to submit a pull request 🔃 or create an issue 🐞 if you find a bug or have a feature request.\nHappy coding with FastHTML and Tailwind CSS! 🎉💻 For more examples, detailed instructions, and further customization options, visit our official documentation.",
+    "crumbs": [
+      "fh_tailwind"
+    ]
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nrun_command\n\n run_command (command, cwd=None)\n\nUtility function to run shell commands.\n\nrun_command(\"echo hi\")\n\nhi\n\n\n\nsource\n\n\ncheck_node_installed\n\n check_node_installed ()\n\nCheck if Node.js is installed and accessible in the PATH.\nfh_tailwind needs node, so we need to ensure it is installed.\n\nsource\n\n\nsetup_tailwind\n\n setup_tailwind ()\n\nInstall and configure Tailwind CSS and DaisyUI in the node directory.\nWe want this project structure to be created, node and public folders\nproject_root/\n  ├── node/\n  │   ├── package.json 📦\n  │   ├── tailwind.config.js ⚙️\n  │   ├── tailwind.css 🌊          \n  │   └── extracted_classes.html 📋 # Extracted classes from Python files\n  ├── public/\n  │   └── styles.css 🌈           # Built CSS output for styling\n  ├── main.py 🐍                  # Your FastHTML app entry point\n  └── other_project_files...\n\nsource\n\n\nupdate_styles\n\n update_styles ()\n\nExtract Tailwind CSS classes from dynamic Python components and update Tailwind setup.",
+    "crumbs": [
+      "core"
+    ]
+  }
+]
