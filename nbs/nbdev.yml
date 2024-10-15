@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "fh_tailwind"
+  site-url: "https://fbereilh.github.io/fh_tailwind"
+  description: "Tool to use  Tailwind CSS and Daisyui in your FastHTML projects."
+  repo-branch: main
+  repo-url: "https://github.com/fbereilh/fh_tailwind"
